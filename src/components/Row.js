@@ -60,7 +60,7 @@ function Row(props) {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {row.products.map((productRow) => (
+                  {row.products && row.products.map((productRow) => (
                     <TableRow key={productRow.date}>
                       <TableCell component="th" scope="row" align="right">
                         {productRow.productId}
