@@ -3,7 +3,13 @@
 This is a React project that hosts a web application with 2 key functionalities 
 - Realtime Order display dashboard (Tab "Dashboard") : Uses endpoint GET http://localhost:8081/stream-sse to read the realtime messages.
 - Search for a given order by orderId (Tab "Search") : Uses endpoint GET http://localhost:8081/get/<<orderId>> to fetch a given order. 
-The application uses Material UI Design language for UI.  
+The application uses Material UI Design language for UI.
+  
+## Sample screen shots
+
+![alt text](https://github.com/malinivenkat/order-dashboard/blob/master/docs/dashboard_screen.PNG?raw=true)
+![alt text](https://github.com/malinivenkat/order-dashboard/blob/master/docs/Search_screen.PNG?raw=true)
+
 --------------------------------------------------------------------------------------------------
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
