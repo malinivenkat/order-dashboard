@@ -24,10 +24,11 @@ const classes = makeStyles((theme) => ({
 
 const Search = () => {
 	const [ order, setOrder] = useState({});
-	const apiURL = "http://localhost:8082/get/1";
-	
-	const fetchData = async () => {
-        const response = await axios.get(apiURL)
+	const apiURL = "http://localhost:8082/get/";
+	const [query, setQuery] = useState('')
+
+	const fetchData = async (event) => {
+        const response = await axios.get(apiURL+query)
         setOrder(response.data) 
     }
 	
@@ -36,6 +37,7 @@ const Search = () => {
 				<Paper component="form" className={classes.root}>
 				  <InputBase
 					className={classes.input}
+					onChange={event => setQuery(event.target.value)}
 					placeholder="Search orders"
 					inputProps={{ 'aria-label': 'search orders' }}
 				  />
